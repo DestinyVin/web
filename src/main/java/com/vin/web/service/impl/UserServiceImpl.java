@@ -1,6 +1,7 @@
 package com.vin.web.service.impl;
 
 import com.vin.web.domain.entity.User;
+import com.vin.web.domain.repository.UserRepository;
 import com.vin.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User findUserById(long id) {
-        return userRepository.findById(id);
+        return userRepository.findUserById(id);
     }
 
     @Override
@@ -35,7 +36,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void delete(long id){
-        return userRepository.delete(id);
+         userRepository.deleteUserById(id);
     }
 
 

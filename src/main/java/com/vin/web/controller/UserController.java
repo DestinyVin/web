@@ -18,7 +18,7 @@ public class UserController {
 
     @RequestMapping("/")
     public String index() {
-        return "redirect:/list";
+        return "redirect:/index";
     }
 
     @RequestMapping("/list")

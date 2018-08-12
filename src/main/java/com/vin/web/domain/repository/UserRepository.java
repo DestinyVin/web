@@ -3,8 +3,14 @@ package com.vin.web.domain.repository;
 import com.vin.web.domain.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
-    User findById(long id);
+import java.util.List;
 
-    long deleteById(Long id);
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    @Override
+    List<User> findAll();
+
+    User findUserById(Long id);
+
+    void deleteUserById(Long id);
 }
